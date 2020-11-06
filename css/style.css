@@ -33,7 +33,7 @@ nav{
 */
 
 
-.gallery{
+.photos .gallery{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -52,12 +52,14 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 10px;
-    background-color: #009fe1
+    background-color: #009fe1;
+    align-content: center;
   }
 
 li{
     display: block;
     text-align: center;
+    align-self: center;
     padding: 20px;
 }
 
