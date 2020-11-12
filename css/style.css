@@ -1,8 +1,6 @@
 body {
-    background-color: #78AB46;
-  
+    background-color: #78AB46;  
 }
-
 
 h1{
     font-size: 45px;
@@ -10,17 +8,19 @@ h1{
     padding: 20px;
 }
 
-
 p{
-   font-size: 24px;
+   font-size: 15px;
    text-align: center;
 }
-nav{
+/* nav{
     background-color: #708090;
     font-size: auto;
     text-align: center;
-}
+} */
 
+.main{
+    text-align: center;
+}
 
 /*img{
     height: 200px;
@@ -31,7 +31,6 @@ nav{
     margin: 10px;
 }
 */
-
 
 .photos .gallery{
     display: flex;
@@ -48,14 +47,22 @@ nav{
 } */
 
 
-ul {
+/* ul {
     list-style-type: none;
     margin: 0;
     padding: 10px;
     background-color: #009fe1;
     align-content: center;
-  }
+  } */
 
+.menu{
+    background-color: #FFFFFF;
+    overflow:hidden;
+}
+/* .menu li{
+    text-align: center;
+    color: black;
+} */
 li{
     display: block;
     text-align: center;
@@ -69,56 +76,63 @@ li a:hover {
 }
 
 .menu li.active > a {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     background-color: #78AB46;
     color: #FFFFFF;
-    text-transform: capitalize;
+    text-transform: uppercase;
     
 }
 
 
-.photos > img{
+/* .photos > img{
     border: 8px #00FF00 dashed;
     border-radius: 8px;
     width: auto;
     height: auto;
     opacity: 0.8;
 
-}
+} */
 
 .container{
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+}
+.container img{
+    width: 100%;
 }
 
-.lakeside-image, .herraduras, .clamlake-image{
+.lakeside-image, .herradurastextblock, .clamlake-image{
     grid-column: 1 / span 1;
+    /* width: 100%; */
 
 }
 
-.lakeside, .herraduras-image, .clamlake{
+.lakesidetextblock, .herraduras-image, .clamlaketextblock{
     grid-column: 2 / span 1;
 }
 
-.lakeside-image, .lakeside{
-    grid-row: 1 / span 1;
-}
-
-.herraduras, .herraduras-image{
+.lakeside-image, .lakesidetextblock{
     grid-row: 2 / span 1;
-}
-
-.clamlake, .clamlake-image{
-    grid-row: 3 / span 1;
     overflow: hidden;
 }
 
-.lakeside, .clamlake, .herraduras{
-    border: 20px solid black;
+.herradurastextblock, .herraduras-image{
+    grid-row: 3 / span 1;
 }
 
+.clamlaketextblock, .clamlake-image{
+    grid-row: 4 / span 1;
+    overflow: hidden;
+}
 
+.lakesidetextblock , .clamlaketextblock , .herradurastextblock{
+    text-align: center;
+}
+
+.lakeside-image, .clamlake-image, .herraduras-image{
+    /* object-fit: cover; */
+    /* border: 10px solid black; */
+}
 nav a:hover{
     text-decoration: underline wavy #3B5323	
 }
@@ -138,3 +152,7 @@ nav a:hover{
 .skip a:focus{
     top:0px;
 }
+
+@media screen and (min-width: 850px){
+
+  }
