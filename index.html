@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-185189877-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-185189877-1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel= "stylesheet" href = "css/html5reset copy.css"/>
@@ -22,11 +31,30 @@
     </header>
     <main>
         <header id="main"></header>
-        <p>I grew up in Cadillac, and I love coming back to visit! Although it may appear as any other small town, there's actually lots of fun stuff to do and see! </p>
-        <p>Cadillac is a great city for those who love water activities - growing up, I spent countless hours playing in Cadillac's 2 lakes (Lake Mitchell and Lake Cadillac)</p>
-        <p>I think it is a great harmony of both small town community and getting to enjoy the outdoors
-            while not being too far from bigger cities like Traverse City and Grand Rapids.
+        <div class = "parallax">
+        <p>I grew up in Cadillac, and lived there for more than 18 years! I love coming back to visit! 
+            Although it may appear as any other small town, there's actually lots of fun stuff to do and see! </p>
+        <p>Cadillac is a great city for those who love water activities - growing up, 
+            I spent countless hours playing in Cadillac's 2 lakes (Lake Mitchell and Lake Cadillac)</p>
+        <p>I think Cadillac is a great combination of small town and city. It has a small town community feel, where you know your neihgbors and peers
+            . It also is  not  too far from bigger cities like Traverse City and Grand Rapids.
         </p>
+
+        </div>
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src = "imgs/cartoonlake.jpg" alt = "lake">
+                </div>
+        <div class="flip-card-back">
+            <p>:}</p> 
+            <h3>Come to Cadillac!</h3> 
+            <p>Can't wait to see you there</p>
+        </div>
+        </div>
+        </div>
+
     </main>
     <footer>
         <p>University of Michigan School of Information 
