@@ -128,6 +128,22 @@ li a:hover {
     opacity: 0.8;
 
 } */
+.secondgrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10 px;
+}
+
+.first{
+    grid-column: 1/ span 1;
+    grid-row: 1 / span 2;
+}
+
+.second{
+    grid-column: 2/ span 1;
+    grid-row: 2 / span 2;
+}
+
 
 .container{
     display: grid;
@@ -211,9 +227,11 @@ nav a:hover{
 } */
 
 .flip-card {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 1;
     background-color: transparent;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     perspective: 1000px;
     align-self: center;
   }
@@ -251,11 +269,11 @@ nav a:hover{
   }
 
 footer{
-    /* position: fixed;
+    position: fixed;
     bottom: 0; */
-    /* position: absolute;
-    left: 0 ; right: 0; bottom: 0;  */
-    height: -100px;
+    left: 0 ;
+    /* right: 0;  */
+    width: 100%;
 }
 
 footer p{
@@ -271,13 +289,35 @@ label {
     margin-left: 10px;
     width: 15%;
 }
-@keyframes animation{
-    0%   {left:100px; top:0px;}
-  25%  {right:100px; top:0px;}
-  50%  {right:100px; top:200px;}
-  75%  {left:50px; top:200px;}
-  100% {left:50px; top:0px;}
 
+.first p{
+    animation-duration: 3s;
+    animation-name: slidey;
+}
+
+.second p{
+    animation-duration: 3s;
+    animation-name: slidetwo;
+}
+@keyframes slidetwo{
+    from{
+        margin-right: 100%;
+        width: 300%;
+    }
+    to{
+        margin-right: 0%;
+        width: 100%;
+    }
+}
+@keyframes slidey{
+    from{
+        margin-left: 100%;
+        width: 300%;
+    }
+    to{
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 767px) and (max-width: 849px){   
@@ -305,6 +345,7 @@ label {
         justify-content: center;
     }
 }
+
 @media screen and (min-width: 850px){
     /* desktop view */
     .menu{
@@ -331,3 +372,12 @@ label {
     }
     
   }
+
+@media screen and (prefers-reduced-motion: reduce){
+    .first p{
+      animation: none ;
+    }
+    .second p{
+        animation: none ;
+      }
+    }
