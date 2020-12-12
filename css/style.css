@@ -3,6 +3,8 @@ body {
     /* background-color:white; */
     /* font-family: Arial, Helvetica, sans-serif;  */
     align-content: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 h1{
@@ -28,26 +30,12 @@ p{
    text-align: center;
    padding: 20px;
 }
-/* nav{
-    background-color: #708090;
-    font-size: auto;
-    text-align: center;
-} */
 
 .main{
     text-align: center;
-    min-height: 45vh;
+    min-height: 45vh;  
 }
 
-/*img{
-    height: 200px;
-    width: inherit;
-    border: 5px black;
-    padding:25px;
-    border-radius: 10px;
-    margin: 10px;
-}
-*/
 
 .photos .gallery{
     display: flex;
@@ -66,28 +54,15 @@ p{
     margin-top: 5px;
 }
 
-
-/* ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    background-color: #009fe1;
-    align-content: center;
-  } */
-
 .menu{
     background-color: darkolivegreen;
     overflow:hidden;
-    display: flex;
+    display: flex; 
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     /* align-items: center; */
 }
-/* .menu li{
-    text-align: center;
-    color: black;
-} */
 
 li{
     /* display: block;*/
@@ -102,7 +77,6 @@ li{
     margin: 1%;
     border-radius: 15px;
 }
-
 
 li a:hover {
     background-color: #ffd500;
@@ -120,14 +94,6 @@ li a:hover {
     
 }
 
-/* .photos > img{
-    border: 8px #00FF00 dashed;
-    border-radius: 8px;
-    width: auto;
-    height: auto;
-    opacity: 0.8;
-
-} */
 .secondgrid{
     display: grid;
     grid-template-columns: auto auto;
@@ -140,8 +106,8 @@ li a:hover {
 }
 
 .second{
-    grid-column: 2/ span 1;
-    grid-row: 2 / span 2;
+    grid-column: 2/ span 2;
+    grid-row: 2 / span 1;
 }
 
 
@@ -206,8 +172,6 @@ nav a:hover{
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
     z-index: 1;
-  
-    /*Your code here*/
     position: absolute;
     top: -40px;
 }
@@ -323,9 +287,11 @@ label {
     }
 }
 
-@media screen and (min-width: 767px) and (max-width: 849px){   
+@media screen and (min-width: 767px) and (max-width: 1024px){   
     /* tablet view */
-
+    body{
+        background-color: lightcyan;
+    }
     .menu{
         display: flex;
         flex-direction: row;
@@ -347,10 +313,25 @@ label {
     .active{
         justify-content: center;
     }
+
+    
+    .first{
+        grid-column: 1/ span 1;
+        grid-row: 1 / span 3;
+    }
+    
+    .second{
+        grid-column: 2/ span 1;
+        grid-row: 4 / span 3;
+    }
+
 }
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 1025px){
     /* desktop view */
+    /* body{
+        background-color: lightcyan;
+    } */
     .menu{
         display: flex;
         flex-direction: row;
